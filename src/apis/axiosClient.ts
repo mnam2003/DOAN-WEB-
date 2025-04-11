@@ -1,6 +1,7 @@
+import { localDataNames } from '@/constants/appInfo'
 import axios from 'axios'
 import queryString from 'query-string'
-import { localDataNames } from '../constants/appInfos';
+
 
 const baseURL = 'http://localhost:3001'
 
