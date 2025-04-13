@@ -16,13 +16,7 @@ const HeaderComponent = () => {
     },
     {
       key: 'shop',
-      label: <Link href={'/shop'}>Cửa hàng</Link>,
-      children: [
-        {
-          key: 'test',
-          label: 'test'
-        }
-      ]
+      label: <Link href={'/danh-muc/all'}>Danh mục</Link>,
     },
     {
       key: 'about',

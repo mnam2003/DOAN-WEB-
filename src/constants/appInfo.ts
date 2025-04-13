@@ -1,5 +1,5 @@
 export const appInfo = {
-    title: "Pursuit",
+    title: "HaiDuong",
     description: " ",
     baseURL: "http://localhost:3001"
 }

@@ -12,7 +12,12 @@ import { PromotionModel } from "@/models/PromotionModel";
 
 const Home = (data: any) => {
   const pageProps = data
-  const {promotion, categoryParent, dishes}: {promotion: PromotionModel[], categoryParent: CategoryModel[], dishes: DishModel[]} = pageProps
+  const {promotion, categoryParent, dishes, categories}: {
+    promotion: PromotionModel[], 
+    categoryParent: CategoryModel[], 
+    dishes: DishModel[], 
+    categories: CategoryModel[] } = pageProps
+
   return (
     <>
       <div>
@@ -45,6 +50,9 @@ export const getStaticProps = async () => {
     const resCategory = await fetch(`${appInfo.baseURL}/dish/get-parent-category`)
     const categoryParent = await resCategory.json()
 
+    const resCate = await fetch(`${appInfo.baseURL}/dish/get-all-categories`)
+    const categories = await resCate.json()
+
     const resDish = await fetch(`${appInfo.baseURL}/dish`)
     const dish = await resDish.json()
 
@@ -53,6 +61,7 @@ export const getStaticProps = async () => {
         promotion: promotion.data,
         categoryParent: categoryParent.data,
         dishes: dish.data,
+        categories: categories.data,
       },
     }
   } catch (error) {
@@ -61,6 +70,7 @@ export const getStaticProps = async () => {
         promotion: [],
         categoty: [],
         dish: [],
+        categories: [],
       },
     }
   }
