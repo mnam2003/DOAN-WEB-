@@ -34,7 +34,7 @@ const CategorySlug = (pageProps: any) => {
   }
   return (
     <div>
-      <HeadComponent url={`${appInfo.baseURL}/danh-muc`} />
+      <HeadComponent title={`${selectedKeyTabs}-${appInfo.title}`} url={`${appInfo.baseURL}/danh-muc`} />
       <div className='container mx-auto my-5'>
         <Breadcrumb
           items={[

@@ -6,6 +6,7 @@ import 'swiper/css/navigation';
 import { Typography } from 'antd';
 import { Navigation } from 'swiper/modules';
 import { VND } from '@/utils/handleCurrency';
+import Link from 'next/link';
 
 interface Props {
     dishes: DishModel[]
@@ -28,32 +29,34 @@ const MenuItemSwiperComponent = (props: Props) => {
         >
             {dishes.map((dish, index) => (
                 <SwiperSlide key={index}>
-                    <div className="bg-white p-3 rounded-[12px]">
-                        <div>
-                            <img
-                                src={dish.images[0]}
-                                alt={dish.title}
-                                style={{
-                                    width: '100%',
-                                    aspectRatio: '1 / 0.8',
-                                    border: '1px solid #ccc',
-                                    objectFit: 'cover',
-                                    borderRadius: '12px',
-                                }}
-                            />
-                        </div>
-                        <div>
-                            <h2 className="text-[1.2rem] md:text-[1.6rem] my-1 truncate max-w-full">{dish.title}</h2>
-                            <div className="h-[48px]">
-                                <Typography.Paragraph ellipsis={{ rows: 2 }}>
-                                    {dish.description}
-                                </Typography.Paragraph>
+                    <Link href={`/san-pham/${dish.slug}`} style={{color: 'black'}}>
+                        <div className="bg-white p-3 rounded-[12px]">
+                            <div>
+                                <img
+                                    src={dish.images[0]}
+                                    alt={dish.title}
+                                    style={{
+                                        width: '100%',
+                                        aspectRatio: '1 / 0.8',
+                                        border: '1px solid #ccc',
+                                        objectFit: 'cover',
+                                        borderRadius: '12px',
+                                    }}
+                                />
                             </div>
-                            <div className="text-end mt-3">
-                                <span className="text-[1.5rem] font-semibold">{VND.format(dish.price)}</span>
+                            <div>
+                                <h2 className="text-[1.2rem] md:text-[1.6rem] my-1 truncate max-w-full">{dish.title}</h2>
+                                <div className="h-[48px]">
+                                    <Typography.Paragraph ellipsis={{ rows: 2 }}>
+                                        {dish.description}
+                                    </Typography.Paragraph>
+                                </div>
+                                <div className="text-end mt-3">
+                                    <span className="text-[1.5rem] font-semibold">{VND.format(dish.price)}</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 </SwiperSlide>
             ))}
         </Swiper>

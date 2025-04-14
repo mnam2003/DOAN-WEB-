@@ -36,7 +36,7 @@ const SubscribeComponent = () => {
               <Typography.Paragraph
                 className="!text-white text-center font-medium"
               >
-                Quý khách hãy đăng ký email để nhận được những thông báo mới nhất và những ưu đãi giảm giá khuyến mãi của nhà hàng Hải Dương
+                Quý khách hãy đăng ký email để nhận được những thông báo mới nhất và những ưu đãi, giảm giá, khuyến mãi của nhà hàng Hải Dương
               </Typography.Paragraph>
               <Form form={form} size='large' className='w-full'>
                 <Form.Item name='email' rules={[{ required: true, message: 'Bạn chưa nhập email!!!' }]}>
