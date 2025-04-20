@@ -19,12 +19,8 @@ const HeaderComponent = () => {
       label: <Link href={'/danh-muc/all'}>Danh mục</Link>,
     },
     {
-      key: 'about',
-      label: <Link href={'/'}>Giới thiệu</Link>
-    },
-    {
       key: 'contact',
-      label: <Link href={'/'}>Liên hệ</Link>
+      label: <Link href={'/lien-he'}>Liên hệ</Link>
     },
   ]
 
