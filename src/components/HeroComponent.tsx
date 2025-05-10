@@ -1,4 +1,5 @@
 import { Button, Carousel, Typography } from 'antd'
+import Link from 'next/link'
 import React from 'react'
 
 const HeroComponent = () => {
@@ -97,7 +98,7 @@ const HeroComponent = () => {
                                     size="large"
                                     className="rounded-full px-8 py-8 text-base md:text-lg"
                                 >
-                                    Đặt bàn ngay
+                                   <Link href={'/dat-ban'}>Đặt bàn ngay</Link>
                                 </Button>
                             </div>
                         </div>

@@ -1,9 +1,27 @@
-import { Button, Form, Input, Typography } from 'antd'
+import handleAPI from '@/apis/handleAPI';
+import { Button, Form, Input, message, Typography } from 'antd'
 import { useForm } from 'antd/es/form/Form'
-import React from 'react'
+import React, { useState } from 'react'
 
 const SubscribeComponent = () => {
+  const [isLoading, setIsLoading] = useState(false);
+
   const [form] = useForm()
+
+  const handleAddNew = async (values: any) => {
+    try {
+      setIsLoading(true)
+      const api = '/subscribe/add-new'
+      await handleAPI(api, values, 'post')
+      message.success('Chúc mừng bạn đã đăng ký thành công')
+    } catch (error) {
+      console.log(error)
+      message.error('Đăng ký không thành công!!')
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
   return (
     <div
       className="w-full h-[70vh] md:h-auto md:min-h-[400px] md:aspect-[1/0.3]"
@@ -38,13 +56,13 @@ const SubscribeComponent = () => {
               >
                 Quý khách hãy đăng ký email để nhận được những thông báo mới nhất và những ưu đãi, giảm giá, khuyến mãi của nhà hàng Hải Dương
               </Typography.Paragraph>
-              <Form form={form} size='large' className='w-full'>
+              <Form form={form} size='large' className='w-full' onFinish={handleAddNew}>
                 <Form.Item name='email' rules={[{ required: true, message: 'Bạn chưa nhập email!!!' }]}>
                   <Input className='w-full' allowClear placeholder='vui lòng nhập email' />
                 </Form.Item>
               </Form>
               <div className='text-center mt-6'>
-                <Button className='py-8 px-14 rounded-[999px]'>Đăng ký</Button>
+                <Button className='py-8 px-14 rounded-[999px]' onClick={() => form.submit()} loading={isLoading}>Đăng ký</Button>
               </div>
             </div>
           </div>

@@ -34,7 +34,7 @@ const HeaderComponent = () => {
           <Menu style={{ border: 'none', width: '100%' }} mode='horizontal' items={items} />
         </div>
         <div className='flex items-center justify-end'>
-          <Button type='primary' size='large'><Link href={'/'}>Đặt bàn</Link></Button>
+          <Button type='primary' size='large'><Link href={'/dat-ban'}>Đặt bàn</Link></Button>
         </div>
       </div>
     </Header>
