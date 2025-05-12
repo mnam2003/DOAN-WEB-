@@ -1,7 +1,7 @@
 import { Button, Layout, Menu, MenuProps, Space } from 'antd'
 import Link from 'next/link'
 import React from 'react'
-import logo from '../assets/images/logo.svg'
+import logo from '../assets/images/logo-doan.png'
 
 type MenuItem = Required<MenuProps>['items'][number]
 
@@ -28,7 +28,8 @@ const HeaderComponent = () => {
     <Header className='bg-white'>
       <div className='grid grid-cols-3 max-w-screen-2xl mx-auto'>
         <div className='flex items-center justify-start'>
-          <img src={logo.src} className='w-24' />
+          <img src={logo.src}  className='w-10'/>
+          <h3>HAIDUONG</h3>
         </div>
         <div className='flex items-center justify-center'>
           <Menu style={{ border: 'none', width: '100%' }} mode='horizontal' items={items} />
