@@ -1,11 +1,11 @@
 import { Image, Layout, Typography } from 'antd'
 import React, { useEffect, useState } from 'react'
-import logo from '../assets/images/logo.svg'
 import { MdLocalPhone } from "react-icons/md";
 import { HiLocationMarker } from "react-icons/hi";
 import { CategoryModel } from '@/models/CategoryModel';
 import Link from 'next/link';
 import handleAPI from '@/apis/handleAPI';
+import logo from '../assets/images/logo-doan.png'
 
 const { Footer } = Layout
 
@@ -73,7 +73,10 @@ const FooterComponent = () => {
                             <div className='flex flex-col gap-4 lg:font-bold mt-6 lg:text-[1.2rem]'>
                                 <span className='flex items-center gap-2'><MdLocalPhone size={26} /> 0395565218</span>
                                 <span className='flex items-center gap-2'><HiLocationMarker size={26} />Tam Quan - Tam Đảo - Vĩnh Phúc</span>
-                                <img src={logo.src} />
+                                <div className='flex items-center gap-4'>
+                                    <img src={logo.src} width={40} height={40}/>
+                                    HaiDuong
+                                </div>
                             </div>
                         </div>
                     </div>
