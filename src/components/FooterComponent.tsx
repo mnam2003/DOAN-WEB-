@@ -20,7 +20,7 @@ const FooterComponent = () => {
         try {
             const api = '/dish/get-all-categories'
             const res = await handleAPI(api)
-            res.data && setCategories(res.data)
+            setCategories(res.data)
         } catch (error) {
             console.log(error)
         }

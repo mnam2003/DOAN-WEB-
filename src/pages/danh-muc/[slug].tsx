@@ -4,7 +4,7 @@ import HeadComponent from '@/components/HeadComponent'
 import { appInfo } from '@/constants/appInfo'
 import { CategoryModel } from '@/models/CategoryModel'
 import { DishModel } from '@/models/DishModel'
-import { Breadcrumb, Dropdown, Menu, Tabs } from 'antd'
+import { Breadcrumb, Dropdown, Tabs } from 'antd'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
@@ -120,6 +120,7 @@ export const getStaticProps = async ({ params }: any) => {
       },
     }
   } catch (error) {
+    console.error(error)
     return {
       props: {
         categories: [],

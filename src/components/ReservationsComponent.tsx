@@ -20,7 +20,9 @@ const ReservationsComponent = () => {
             setIsLoading(true)
             const api = '/reservations/add-new-reservations'
             const res: any = await handleAPI(api, data, 'post')
-            res.data && message.success('Cảm ơn bạn đã đặt bàn, chúng tôi sẽ sớm phản hồi')
+            if(res.data) {
+                message.success('Cảm ơn bạn đã đặt bàn, chúng tôi sẽ sớm phản hồi')
+            } 
             form.resetFields()
         } catch (error) {
             console.log(error)

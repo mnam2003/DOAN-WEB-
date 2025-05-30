@@ -21,7 +21,9 @@ const Contact = (pageProps: any) => {
             setIsLoading(true)
             const api = '/feedback/add-new-feedback'
             const res = await handleAPI(api, {...values, status: 'Chưa phản hổi'}, 'post')
-            res.data && message.success('Cảm ơn bạn đã góp ý cho nhà hàng.')
+            if(res.data) {
+                message.success('Cảm ơn bạn đã góp ý cho nhà hàng.')
+            }
         } catch (error) {
             console.log(error)
             message.error('Gửi ý kiến đánh giá không thành công!!')
@@ -85,6 +87,7 @@ export const getStaticProps = async () => {
             },
         }
     } catch (error) {
+        console.error(error)
         return {
             props: {
                 dishes: [],

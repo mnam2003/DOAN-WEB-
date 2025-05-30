@@ -25,7 +25,7 @@ const MenuComponent = (props: Props) => {
         try {
             const api = `/dish/get-dish-by-id-category?id=${id}`
             const res = await handleAPI(api)
-            res.data && setDishes(res.data)
+            setDishes(res.data)
         } catch (error) {
             console.log(error)
         }

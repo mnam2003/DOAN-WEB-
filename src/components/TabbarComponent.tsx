@@ -10,7 +10,7 @@ interface Props {
 const { Title } = Typography
 
 const TabbarComponent = (props: Props) => {
-  const { title, right, level } = props
+  const { title, level } = props
 
   return (
     <div>

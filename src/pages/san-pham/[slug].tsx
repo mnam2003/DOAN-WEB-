@@ -71,6 +71,7 @@ export const getStaticProps = async ({ params }: any) => {
       },
     }
   } catch (error) {
+    console.error(error)
     return {
       props: {
         dish: {},

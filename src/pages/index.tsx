@@ -13,11 +13,7 @@ import { PromotionModel } from "@/models/PromotionModel";
 
 const Home = (data: any) => {
   const pageProps = data
-  const {promotion, categoryParent, dishes, categories}: {
-    promotion: PromotionModel[], 
-    categoryParent: CategoryModel[], 
-    dishes: DishModel[], 
-    categories: CategoryModel[] } = pageProps
+  const {categoryParent}: { categoryParent: CategoryModel[] } = pageProps
 
   return (
     <>
@@ -66,6 +62,7 @@ export const getStaticProps = async () => {
       },
     }
   } catch (error) {
+    console.error(error)
    return {
       props: {
         promotion: [],
