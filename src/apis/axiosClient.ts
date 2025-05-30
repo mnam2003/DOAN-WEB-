@@ -4,8 +4,8 @@ import axios from 'axios'
 import queryString from 'query-string'
 
 
-const baseURL = 'http://localhost:3001'
-
+//const baseURL = 'http://localhost:3001'
+const baseURL = 'https://doan-server-9zrj.onrender.com'
 const getAccessToken = () => {
     const res = localStorage.getItem(localDataNames.authData)
     return res ? JSON.parse(res).token : ''
