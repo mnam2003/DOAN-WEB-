@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import handleAPI from '@/apis/handleAPI';
 import { Button, Form, Input, message, Typography } from 'antd'
 import { useForm } from 'antd/es/form/Form'

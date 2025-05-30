@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import handleAPI from '@/apis/handleAPI'
 import HeadComponent from '@/components/HeadComponent'
 import MenuItemSwiperComponent from '@/components/MenuItemSwiperComponent'

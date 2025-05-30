@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { add0toNumber } from "./add0toNumber"
 
 export class DateTime {

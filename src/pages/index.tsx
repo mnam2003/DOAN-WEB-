@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import AboutComponent from "@/components/AboutComponent";
 import HeadComponent from "@/components/HeadComponent";
 import HeroComponent from "@/components/HeroComponent";

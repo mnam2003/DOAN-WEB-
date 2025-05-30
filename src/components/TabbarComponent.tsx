@@ -1,5 +1,5 @@
 import { Typography } from 'antd'
-import React, { ReactNode, useEffect, useState } from 'react'
+import React, { ReactNode } from 'react'
 
 interface Props {
   title: string,

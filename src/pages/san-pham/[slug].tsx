@@ -1,5 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import HeadComponent from '@/components/HeadComponent'
-import MenuComponent from '@/components/MenuComponent'
 import MenuItemSwiperComponent from '@/components/MenuItemSwiperComponent'
 import { appInfo } from '@/constants/appInfo'
 import { DishModel } from '@/models/DishModel'

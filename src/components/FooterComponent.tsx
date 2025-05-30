@@ -1,4 +1,4 @@
-import { Image, Layout, Typography } from 'antd'
+import { Layout, } from 'antd'
 import React, { useEffect, useState } from 'react'
 import { MdLocalPhone } from "react-icons/md";
 import { HiLocationMarker } from "react-icons/hi";

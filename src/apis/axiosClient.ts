@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { localDataNames } from '@/constants/appInfo'
 import axios from 'axios'
 import queryString from 'query-string'

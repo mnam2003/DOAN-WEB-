@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export const getTreevalues = (datas: any, isGetAllInfo?: boolean) => {
     const values: any[] = []
 

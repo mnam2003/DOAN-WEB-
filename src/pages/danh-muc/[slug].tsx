@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import DishItemComponent from '@/components/DishItemComponent'
 import HeadComponent from '@/components/HeadComponent'
 import { appInfo } from '@/constants/appInfo'
