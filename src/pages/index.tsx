@@ -7,8 +7,6 @@ import ReservationsComponent from "@/components/ReservationsComponent";
 import SubscribeComponent from "@/components/SubscribeComponent";
 import { appInfo } from "@/constants/appInfo";
 import { CategoryModel } from "@/models/CategoryModel";
-import { DishModel } from "@/models/DishModel";
-import { PromotionModel } from "@/models/PromotionModel";
 
 
 const Home = (data: any) => {
